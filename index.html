@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Physics Balls 2048</title>
+    <title>Unity WebGL Player | Physical Balls 2048</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 
@@ -55,7 +55,6 @@
     </script>
 
     <script>
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       canvas.addEventListener("touchstart", function(){
@@ -99,13 +98,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/PhysicsBalls2048VKBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/0ccb5985be56d070344b1f8ec6faa13f.data.unityweb",
-        frameworkUrl: buildUrl + "/d3e90d1eda84bf05ea608e9af05dcb95.js.unityweb",
-        codeUrl: buildUrl + "/878878b049587b679e805f06c959ea7c.wasm.unityweb",
+        dataUrl: buildUrl + "/b49695f93fdd23a6c3a30fac30a01a27.data.unityweb",
+        frameworkUrl: buildUrl + "/8b7c7bc8877ca477be2a836a06297675.js.unityweb",
+        codeUrl: buildUrl + "/5bbe63249792eaf4cbb2653e14e5ccb1.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Avlerm",
-        productName: "Physics Balls 2048",
-        productVersion: "0.2",
+        productName: "Physical Balls 2048",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
@@ -129,7 +128,6 @@
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-
         canvas.style.width = "100%";
         canvas.style.height = "100%";
       } else {
@@ -154,9 +152,7 @@
                 alert(message);
               });
             };
-
       document.body.appendChild(script);
-
     </script>
   </body>
 </html>
