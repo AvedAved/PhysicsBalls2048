@@ -6,8 +6,37 @@
     <title>Unity WebGL Player | Physical Balls 2048</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="GameAnalytics.min.js"></script>
 
-<script src="https://avlerm.ru/vksdk/browser.min.js"></script>
+    <script>
+    try {
+        if (typeof gameanalytics !== 'undefined' && gameanalytics.GameAnalytics) {
+            gameanalytics.GameAnalytics.configureBuild("0.1"); 
+            gameanalytics.GameAnalytics.initialize("b2b3d5d145d47b6c8777fa5720964603", "6436c81a91a99caa960db8631939bde149f1b0ff");
+        } else {
+            //console.warn("[Analytics] Скрипт GameAnalytics не загружен (возможно, заблокирован AdBlock).");
+        }
+    } catch (error) {
+        //console.error("[Analytics] Ошибка при инициализации:", error);
+    }
+    </script>
+
+<script src="https://avedaved.github.io/browser.min.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111276874', 'ym');
+
+    ym(111276874, 'init', {clickmap:true, accurateTrackBounce:true, trackLinks:true});
+    window.YM_COUNTER_ID = 111276874;
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111276874" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
   </head>
   <body>
@@ -96,11 +125,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/PhysicsBalls2048VKBuild.loader.js";
+      var loaderUrl = buildUrl + "/b23dd96997961653e2825455633aac82.loader.js";
       var config = {
-        dataUrl: buildUrl + "/f49475ddb941254edba2230021258312.data.unityweb",
-        frameworkUrl: buildUrl + "/65b593d9a4bd622cf54454e12fbfebd3.js.unityweb",
-        codeUrl: buildUrl + "/e8ea7d17db9cbc89a9a9469bfbf22c33.wasm.unityweb",
+        dataUrl: buildUrl + "/bc053dfcd392b29b66c80c3699c63be0.data.unityweb",
+        frameworkUrl: buildUrl + "/9535810fa3cca1cd40bef9adb39c9f9e.framework.js.unityweb",
+        codeUrl: buildUrl + "/49c9da0c65d684bcf77898ade61a3eae.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Avlerm",
         productName: "Physical Balls 2048",
